@@ -18,7 +18,7 @@ public class LoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         //模拟jwt解析
-        CurrentUser.set("001");
+        CurrentUser.set("u001");
         chain.doFilter(request, response);
     }
 }
