@@ -3,7 +3,7 @@ package top.futurenotfound.log.demo;
 import lombok.AllArgsConstructor;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import top.futurenotfound.log.CurrentUser;
+import top.futurenotfound.log.util.CurrentUser;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
