@@ -1,0 +1,8 @@
+server:
+  port: 8900
+
+log:
+  executor-pool:
+    rejected-policy: discard
+    core-pool-size: 200
+    maximum-pool-size: 400
