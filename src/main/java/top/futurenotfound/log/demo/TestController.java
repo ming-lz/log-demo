@@ -14,7 +14,7 @@ public class TestController {
 
     @GetMapping
     @LogRecord(
-            contentExpression = "金额变更: 金额从 #orderInfo.amount 元变更为 #orderInfo.newAmount 元",
+            contentExpression = "金额变更: 金额从 `@testServiceImpl.getAmountById(#orderInfo.id)` 元变更为 `#orderInfo.newAmount` 元",
             operatorExpression = "@testServiceImpl.getUsernameById(#orderInfo.id)",
             timestampExpression = "#orderInfo.timestamp",
             nullFillWord = "空"
@@ -24,7 +24,7 @@ public class TestController {
     }
 
     @PostMapping
-    @LogRecord(contentExpression = "金额变更: 金额从 #amount 元变更为 #newAmount 元")
+    @LogRecord(contentExpression = "金额变更: 金额从 `#amount` 元变更为 `#newAmount` 元")
     public void handle(BigDecimal amount, BigDecimal newAmount) {
 
     }

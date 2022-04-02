@@ -4,5 +4,5 @@ server:
 log:
   executor-pool:
     rejected-policy: discard
-    core-pool-size: 200
-    maximum-pool-size: 400
+    core-pool-size: 1
+    maximum-pool-size: 1
