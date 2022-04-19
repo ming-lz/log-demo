@@ -27,10 +27,12 @@ public class TestController {
     @PostMapping
     @LogRecord(
             modelName = "Test.handle.post",
-            contentExpression = "金额变更: 金额从 `#amount` 元变更为 `#newAmount` 元"
+            contentExpression = "金额变更: 金额从 `#amount` 元变更为 `#_result.newAmount` 元"
     )
-    public void handle(BigDecimal amount, BigDecimal newAmount) {
-
+    public OrderInfo handle(BigDecimal amount) {
+        OrderInfo orderInfo = new OrderInfo();
+        orderInfo.setNewAmount(new BigDecimal(900));
+        return orderInfo;
     }
 
 }
